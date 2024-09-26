@@ -2,6 +2,9 @@
 
 # Create a simple menu class
 
+import Greeting
+
+
 class Menu:
     def __init__(self, options):
         self.options = options
@@ -31,12 +34,16 @@ class Menu:
 
 if __name__ == "__main__":
     def option1():
-        print("Option 1 selected")
+        print("\t\nOption 1 selected\n")
 
     def option2():
-        print("Option 2 selected")
+        print("\t\nOption 2 selected\n")
 
     menu = Menu({
+        "hi": Greeting.say_hi,
+        "bye": Greeting.say_bye,
+        "hello": Greeting.say_hello,
+        "goodbye": Greeting.say_goodbye,
         "1": option1,
         "2": option2,
         "quit": exit
